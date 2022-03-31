@@ -1,0 +1,112 @@
+
+  #container-signup{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 30px;
+  }
+  #signupBox{
+    
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    box-shadow: 5px 5px 5px 5px lightgrey;
+    border-radius: 10px;
+    background-color: rgb(240, 240, 240);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px;
+    padding-top: 20px;
+  }
+  
+
+  #email{
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    background-color: lightgrey;
+    width: 320px;
+  }
+  #password{
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    background-color: lightgrey;
+    width: 320px;
+  }
+  #mobilenumber{
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    background-color: lightgrey;
+    width: 320px;
+  }
+  #userrole{
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    background-color: lightgrey;
+    width: 340px; 
+  }
+  #userrole option{
+    font-size: 15px;
+    background-color: lightgray;    
+  }
+  
+  #username{
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    background-color: lightgrey;
+    width: 320px;
+  }
+  #age{
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    background-color: lightgrey;
+    width: 320px;
+  }
+  #required{
+    color: red;
+    font-size: 11px;
+    margin-top: 0%;
+    margin-bottom: 0px;
+    margin-right: 250px;
+    
+}
+#passworderror{
+    color: red;
+    font-size: 11px;
+    margin-top: 0%;
+    margin-bottom: 0px;
+    margin-right: 217px;
+}
+#usernameerror{
+    color: red;
+    font-size: 11px;
+    margin-top: 0%;
+    margin-bottom: 0px;
+    margin-right: 222px;
+}
+#mobileerror{
+    color: red;
+    font-size: 11px;
+    margin-top: 0%;
+    margin-bottom: 0px;
+    margin-right: 190px;
+}
+
+  #submitButton{
+    background-color: palevioletred;
+    width: 200px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  #submitButton:active{
+    background-color: rgb(231, 71, 183);
+  }
