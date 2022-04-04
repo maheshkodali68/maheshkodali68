@@ -1,8 +1,8 @@
-import React,{useState,useEffect} from "react";
-
+import React,{useState,useEffect} from "react"; 
 import axios from "axios";
 import UserNavbar from '../user-navbar/UserNavbar'
 import './UserDashboard.css';
+import {Link} from 'react-router-dom';
 
 
 
@@ -10,14 +10,12 @@ import './UserDashboard.css';
 export default function Dashboard(){
     const [posts,setPosts] = useState([]);
 
-    ;
-
+    
     
 
     useEffect(() => {
         axios.get("https://jsonplaceholder.typicode.com/users")
         .then(res => {
-            
             setPosts(res.data)
         })
         .catch(err => {
@@ -31,9 +29,14 @@ export default function Dashboard(){
                     <table id='dashboard-table'>
                         <tbody>
                             {posts.map(post => (
-                                <><tr id='dashboard-tr' key={post.id}><td id='dashboard-td'>{post.name}</td>
-                                    <td id='dashboard-td'>{post.website}</td>
-                                    <td id='dashboard-td'>{post.phone}</td></tr></>
+                                <><Link to={'companyDetail'}>
+                                    <tr id='dashboard-tr'>
+                                        <td id='dashboard-td'>{post.name}</td>
+                                        <td id='dashboard-td'>{post.website}</td>
+                                        <td id='dashboard-td'>{post.phone}</td>
+                                    </tr>
+                                  </Link>
+                                </>
                             ))}
                         </tbody>
                     </table>

@@ -8,8 +8,8 @@ import './UserCompanyDetails.css';
 export default function UserCompanyDetails(){
     const [posts,setPosts] = useState([]);
 
-    useEffect(() => {
-        axios.get("https://jsonplaceholder.typicode.com/users")
+    useEffect((props) => {
+        axios.get("https://jsonplaceholder.typicode.com/users/"+props.match.params.id)
         .then(res => {
         
             setPosts(res.data)

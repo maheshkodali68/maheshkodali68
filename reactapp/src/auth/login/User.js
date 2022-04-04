@@ -37,7 +37,7 @@ export default function User(){
       if(email!=='' && password!==''){
         console.log(data);
         
-        axios.post("http://localhost:4200/login",{
+        axios.post("http://localhost:4200/user/login",{
           username: email,
           password: password
         }).then(response =>{

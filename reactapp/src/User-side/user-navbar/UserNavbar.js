@@ -3,6 +3,7 @@ import React from "react";
 import './UserNavbar.css';
 export default function UserNavbar(){
 
+  const logOut=()=>{}
 
 
 
@@ -14,7 +15,7 @@ export default function UserNavbar(){
                  <a id='userDashboardLink' href='dashboard'>Dashboard</a>
                 <a id='userProfileLink' href="profile">Profile</a>
                 <a id='userBookingLink' href="bookings">My Bookings</a>
-                <a id='userLogoutButton' href="/">Logout</a>
+                <a id='userLogoutButton' href="/" onClick={logOut}>Logout</a>
           </nav>
         
           </div>
