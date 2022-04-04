@@ -7,7 +7,7 @@ export default function UserBookings(){
     const [data, setData] = useState([]);
 
      useEffect(() => {
-        axios.get("https://jsonplaceholder.typicode.com/users")
+        axios.get("https://localhost:4200/user/hallDetail")
         .then(res => {
             
             setData(res.data)
@@ -32,10 +32,10 @@ export default function UserBookings(){
                 {
                     data.map(post => (
                         <><tr id='bookings-tr'><td id='bookings-td'>{post.name}</td>
-                        <td id='bookings-td'>{post.website}</td>
-                        <td id='bookings-td'>{post.phone}</td>
-                        <td id='bookings-td'>{post.username}</td>
-                        <td id='bookings-td'>{post.email}</td>
+                        <td id='bookings-td'>{post.date}</td>
+                        <td id='bookings-td'>{post.hallPrice}</td>
+                        <td id='bookings-td'>{post.days}</td>
+                        <td id='bookings-td'>{post.totalPrice}</td>
                         </tr></>
                     ))
                 }
