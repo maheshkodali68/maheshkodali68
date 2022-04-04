@@ -1,7 +1,7 @@
 import React,{useState} from "react";
-import {NavLink} from "react-router-dom";
+import {NavLink , useNavigate} from "react-router-dom";
 import axios from "axios";
-import AdminDashboard from "../../Admin-side/admin-dashboard/AdminDashboard";
+
 import './Admin.css';
 function Admin (){
 
@@ -13,7 +13,9 @@ function Admin (){
       username : '',
       password : ''
     });
-
+    
+    let navigate = useNavigate();
+    
     const changeHandler=(e)=>{
       setEmailError('');
       setPasswordError('');
@@ -37,7 +39,7 @@ function Admin (){
           password: password
         })
         .then(res=>{
-          <AdminDashboard />
+          navigate('./admin/dashboard')
         })
       }
     }
