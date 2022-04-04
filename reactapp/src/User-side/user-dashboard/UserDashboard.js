@@ -14,7 +14,7 @@ export default function Dashboard(){
     
 
     useEffect(() => {
-        axios.get("https://jsonplaceholder.typicode.com/users")
+        axios.get("https://localhost:4200/admin/addHall")
         .then(res => {
             setPosts(res.data)
         })
