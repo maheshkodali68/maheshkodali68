@@ -32,8 +32,8 @@ export default function Dashboard(){
                                 <><Link to={'companyDetail'}>
                                     <tr id='dashboard-tr'>
                                         <td id='dashboard-td'>{post.name}</td>
-                                        <td id='dashboard-td'>{post.website}</td>
-                                        <td id='dashboard-td'>{post.phone}</td>
+                                        <td id='dashboard-td'>{post.companyAddress}</td>
+                                        <td id='dashboard-td'>{post.mobileNumber}</td>
                                     </tr>
                                   </Link>
                                 </>
