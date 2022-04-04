@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import {NavLink} from "react-router-dom";
 import axios from "axios";
-import AdminDashboard from "../../Admin-side/AdminDashboard";
+import AdminDashboard from "../../Admin-side/admin-dashboard/AdminDashboard";
 import './Admin.css';
 function Admin (){
 

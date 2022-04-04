@@ -2,13 +2,14 @@ import React,{useState} from "react";
 import {NavLink} from "react-router-dom";
 import axios from 'axios';
 import './User.css';
-import UserDashboard from "/home/coder/project/workspace/reactapp/src/Admin-side/AdminDashboard";
+import UserDashboard from "../../User-side/user-dashboard/UserDashboard";
 
 export default function User(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
+    
     
     const [data,setData] = useState({
       username : '',
@@ -42,6 +43,7 @@ export default function User(){
         }).then(response =>{
           <UserDashboard/>
       })
+      
     }}
         return(
             
