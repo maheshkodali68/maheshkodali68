@@ -9,7 +9,7 @@ export default function UserCompanyDetails(){
     const [posts,setPosts] = useState([]);
 
     useEffect((props) => {
-        axios.get("https://jsonplaceholder.typicode.com/users/"+props.match.params.id)
+        axios.get("https://localhost:4200/admin/addHall")
         .then(res => {
         
             setPosts(res.data)
@@ -27,8 +27,8 @@ export default function UserCompanyDetails(){
                         <tbody>
                             {posts.map(post => (
                                 <><tc id='userCompanyDetail-tc'><td id='userCompanyDetail-td-name'>{post.name}</td><br />
-                                    <td id='userCompanyDetail-td1'>{post.email}</td><br />
-                                    <td id='userCompanyDetail-td1'>{post.phone}</td><br /></tc></>
+                                    <td id='userCompanyDetail-td1'>{post.companyAddress}</td><br />
+                                    <td id='userCompanyDetail-td1'>{post.mobileNumber}</td><br /></tc></>
                             ))}
                         </tbody>
                     </table>
@@ -39,11 +39,11 @@ export default function UserCompanyDetails(){
                     <table id='userCompanyDetail-table2'>
                         <tbody>
                             {posts.map(post => (
-                                <><tr id='userCompanyDetail-tr'><td id='userCompanyDetail-td2'>Event Date: {post.name}</td>
-                                    <td id='userCompanyDetail-td2'>{post.email}</td>
-                                    <td id='userCompanyDetail-td2'>{post.phone}</td>
+                                <><tr id='userCompanyDetail-tr'><td id='userCompanyDetail-td2'>Event Date: {post.date}</td>
+                                    <td id='userCompanyDetail-td2'>{post.hallPrice}</td>
+                                    <td id='userCompanyDetail-td2'>{post.hallType}</td>
 
-                                    <td id='userCompanyDetail-td2'>{post.username}</td></tr></>
+                                    <td id='userCompanyDetail-td2'>{post.availability}</td></tr></>
                             ))}
                         </tbody>
                     </table>
