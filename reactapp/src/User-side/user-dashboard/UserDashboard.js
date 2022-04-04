@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react";
-import { Link} from 'react-router-dom';
+
 import axios from "axios";
 import UserNavbar from '../user-navbar/UserNavbar'
 import './UserDashboard.css';
@@ -31,9 +31,9 @@ export default function Dashboard(){
                     <table id='dashboard-table'>
                         <tbody>
                             {posts.map(post => (
-                                <><Link to='./user/companyDetail'><tr id='dashboard-tr' key={post.id}><td id='dashboard-td'>{post.name}</td>
+                                <><tr id='dashboard-tr' key={post.id}><td id='dashboard-td'>{post.name}</td>
                                     <td id='dashboard-td'>{post.website}</td>
-                                    <td id='dashboard-td'>{post.phone}</td></tr></Link></>
+                                    <td id='dashboard-td'>{post.phone}</td></tr></>
                             ))}
                         </tbody>
                     </table>
