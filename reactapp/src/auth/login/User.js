@@ -1,8 +1,8 @@
 import React,{useState} from "react";
-import {NavLink} from "react-router-dom";
+import {NavLink , useNavigate} from "react-router-dom";
 import axios from 'axios';
 import './User.css';
-import UserDashboard from "../../User-side/user-dashboard/UserDashboard";
+
 
 export default function User(){
     const [email, setEmail] = useState('');
@@ -17,7 +17,7 @@ export default function User(){
     });
     
     
-   
+   let navigate = useNavigate();
    
     const changeHandler=(e)=>{
       setEmailError('');
@@ -41,7 +41,7 @@ export default function User(){
           username: email,
           password: password
         }).then(response =>{
-          <UserDashboard/>
+          navigate('./user/dashboard');
       })
       
     }}
