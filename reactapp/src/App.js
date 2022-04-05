@@ -27,7 +27,7 @@ function App(){
                 <Route path='/admin/dashboard' element={<AdminDashboard/>}/>
                 <Route path='/admin/profile' element={<AdminProfile/>}/>
                 <Route path='/admin/bookings' element={<AdminBookings/>}/>
-                <Route path='/user/companyDetail/:id' element={<UserCompanyDetails/>} />
+                <Route path='/user/companyDetail' element={<UserCompanyDetails/>} />
               </Routes>
           
             </BrowserRouter>
